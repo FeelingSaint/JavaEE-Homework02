@@ -21,12 +21,13 @@ public class submit extends HttpServlet {
         //根据编号读取作业内容
         homework homework = shjdbc.getHomework(id);
         req.setAttribute("homework",homework);
-        req.getRequestDispatcher("jsp/submit.jsp").forward(req,resp);
+        req.getRequestDispatcher("submit.jsp").forward(req,resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         stuhom sh = new stuhom();
+        req.setCharacterEncoding("UTF-8");
         String sid = req.getParameter("sid");
         sh.setSId(Long.parseLong(sid));
         String scontent = req.getParameter("scontent");

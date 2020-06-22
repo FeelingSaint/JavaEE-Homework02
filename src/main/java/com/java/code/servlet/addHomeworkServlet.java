@@ -17,11 +17,11 @@ public class addHomeworkServlet  extends HttpServlet {
     @Override
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        req.setCharacterEncoding("UTF-8");
         String title = req.getParameter("title");
         String content = req.getParameter("content");
         shjdbc.addHomework(title,content);
-        req.getRequestDispatcher("jsp/teacher.jsp").forward(req, resp);
+        req.getRequestDispatcher("teacher.jsp").forward(req, resp);
     }
 
 

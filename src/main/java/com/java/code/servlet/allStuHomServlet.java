@@ -17,7 +17,8 @@ public class allStuHomServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<stuhom> list = shjdbc.allSH();
+        req.setCharacterEncoding("UTF-8");
         req.setAttribute("list", list);
-        req.getRequestDispatcher("jsp/allStuHom.jsp").forward(req, resp);
+        req.getRequestDispatcher("allStuHom.jsp").forward(req, resp);
     }
 }

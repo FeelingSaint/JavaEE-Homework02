@@ -18,7 +18,7 @@
         <li><a href="addHomework.jsp">添加作业</a><br/></li>
         <li><a href="addStudent.jsp">添加学生</a><br/></li>
         <li><a href="${pageContext.request.contextPath}/allsh">查看作业</a><br/></li>
-        <li><a href="../index.jsp">返回</a><br/></li>
+        <li><a href="index.jsp">返回</a><br/></li>
     </ul>
     <link>
 </div>

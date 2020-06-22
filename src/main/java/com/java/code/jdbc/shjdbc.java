@@ -13,9 +13,9 @@ import java.util.List;
 public class shjdbc {
     //JDBC链接数据库
     private static String driver="com.mysql.cj.jdbc.Driver";
-    private static String url="jdbc:mysql://127.0.0.1:3306/homework?&useSSL=false&serverTimezone=UTC";
+    private static String url="jdbc:mysql://127.0.0.1:3306/homework?&useSSL=false&serverTimezone=UTC&characterEncoding=utf-8";
     private static String user="root";
-    private static String password="17301019";
+    private static String password="123456";
 
     public static List<stuhom> allSH() {
         //从学生作业表中读取信息

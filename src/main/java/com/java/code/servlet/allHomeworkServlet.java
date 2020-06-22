@@ -16,8 +16,9 @@ public class allHomeworkServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<homework> list = shjdbc.allHomework();
+        req.setCharacterEncoding("UTF-8");
         req.setAttribute("list", list);
-        req.getRequestDispatcher("jsp/allHomework.jsp").forward(req, resp);
+        req.getRequestDispatcher("allHomework.jsp").forward(req, resp);
     }
 
 
